@@ -12,6 +12,10 @@ namespace HousingEstate
         private int numberOfRooms;
 
 
-        
+        public List<Person> personList = new List<Person>() { };
+
+
+
+       
     }
 }
