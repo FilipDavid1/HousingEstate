@@ -7,14 +7,14 @@ namespace HousingEstate
     class Person
     {
         private int age;
-        private string name;
+        private string firstName;
         private string lastName;
 
 
         public Person(int age, string name, string lastName)
         {
             this.age = age;
-            this.name = name;
+            this.firstName = name;
             this.lastName = lastName;
 
         }
@@ -22,7 +22,7 @@ namespace HousingEstate
 
         public override string ToString()
         {
-            return String.Format($"Person with name {this.name} last name {this.lastName} and with age {this.age}");
+            return String.Format($"Person with name {this.firstName} last name {this.lastName} and with age {this.age}");
         }
     }
 }
