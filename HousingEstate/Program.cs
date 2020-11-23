@@ -6,7 +6,8 @@ namespace HousingEstate
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person n = new Person(12, "Zdenek", "Polreich");
+            Console.WriteLine(n.ToString());
         }
     }
 }
