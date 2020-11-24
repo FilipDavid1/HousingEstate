@@ -20,7 +20,8 @@ namespace HousingEstate
             flat.AddHabitant(u);
             flat.AddHabitant(i);
             flat.AddHabitant(o);
-            flat.ShowPersonList();
+            Console.WriteLine(flat.GetInfoAboutAllHabitants());
+            
         }
     }
 }

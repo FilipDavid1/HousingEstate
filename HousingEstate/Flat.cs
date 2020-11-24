@@ -12,7 +12,7 @@ namespace HousingEstate
         private int numberOfRooms;
 
 
-        public List<Person> personList = new List<Person>() { };
+        public List<Person> habitantList = new List<Person>() { };
 
         public Flat(int numberOfFlat, int sizeOfFlat, int numberOfRooms)
         {
@@ -30,20 +30,22 @@ namespace HousingEstate
 
         public void AddHabitant(Person habitant)
         {
-            personList.Add(habitant);
+            habitantList.Add(habitant);
 
         }
 
-        public void ShowPersonList()
+
+
+        public string GetInfoAboutAllHabitants()
         {
-            foreach (var person in personList)
+            string neviem ="";
+            foreach (var habitant in habitantList)
             {
-                Console.WriteLine(person);
+                neviem += habitant.ToString() + "\n";
+                
             }
+            return neviem;
         }
-
-
-        
 
 
 
