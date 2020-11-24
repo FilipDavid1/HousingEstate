@@ -14,14 +14,6 @@ namespace HousingEstate
 
         public List<Person> personList = new List<Person>() { };
 
-
-
-        public void AddPerson(Person person)
-        {
-            personList.Add(person);
-        }
-
-
         public Flat(int numberOfFlat, int sizeOfFlat, int numberOfRooms)
         {
             this.numberOfFlat = numberOfFlat;
@@ -35,5 +27,25 @@ namespace HousingEstate
             return String.Format(
                 $"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}");
         }
+
+        public void AddHabitant(Person habitant)
+        {
+            personList.Add(habitant);
+
+        }
+
+        public void ShowPersonList()
+        {
+            foreach (var person in personList)
+            {
+                Console.WriteLine(person);
+            }
+        }
+
+
+        
+
+
+
     }
 }
