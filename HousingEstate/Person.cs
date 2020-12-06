@@ -8,21 +8,44 @@ namespace HousingEstate
     {
         private int age;
         private string firstName;
-        private string lastName;
+        private string surName;
+        public Flat currentFlat;
+
+        public int Age
+        {
+            get => age;
+
+            set => age = value;
+        }
+
+        public string FirstName
+        {
+            get => firstName;
+
+            set => firstName = value;
+        }
+
+        public string Surname
+        {
+            get => surName;
+            set => surName = value;
+        }
+
+       
 
 
         public Person(int age, string name, string lastName)
         {
             this.age = age;
             this.firstName = name;
-            this.lastName = lastName;
+            this.surName = lastName;
 
         }
 
 
         public override string ToString()
         {
-            return String.Format($"Person with name {this.firstName} last name {this.lastName} and with age {this.age}");
+            return String.Format($"Person with name {this.firstName} last name {this.surName} and with age {this.age}");
         }
     }
 }

@@ -12,16 +12,19 @@ namespace HousingEstate
             Person o = new Person(40, "Andrea", "Hlavata");
 
             Flat flat = new Flat(32, 60, 3);
-            
 
+           
             Console.WriteLine(v.ToString());
             Console.WriteLine(flat.ToString());
             flat.AddHabitant(v);
             flat.AddHabitant(u);
             flat.AddHabitant(i);
             flat.AddHabitant(o);
+            Console.WriteLine(u.currentFlat.NumberOfRooms);
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
-            
+            Console.WriteLine(flat.NumberOfFlats);
+           
+
         }
     }
 }

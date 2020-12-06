@@ -12,6 +12,32 @@ namespace HousingEstate
         private int numberOfRooms;
 
 
+
+
+        public int NumberOfFlats
+        {
+            get => numberOfFlat;
+
+            set => numberOfFlat = value;
+        }
+
+
+        public int SizeOfFlat
+        {
+            get => sizeOfFlat;
+
+            set => sizeOfFlat = value;
+        }
+
+        public int NumberOfRooms
+        {
+            get => numberOfRooms;
+
+            set => numberOfRooms = value;
+        }
+
+       
+
         public List<Person> habitantList = new List<Person>() { };
 
         public Flat(int numberOfFlat, int sizeOfFlat, int numberOfRooms)
@@ -24,13 +50,14 @@ namespace HousingEstate
 
         public override string ToString()
         {
-            return String.Format(
-                $"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}");
+            return String.Format($"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}");
         }
 
         public void AddHabitant(Person habitant)
         {
             habitantList.Add(habitant);
+            habitant.currentFlat = this;
+            
 
         }
 
@@ -41,7 +68,7 @@ namespace HousingEstate
             string neviem ="";
             foreach (var habitant in habitantList)
             {
-                neviem += habitant.ToString() + "\n";
+                neviem += habitant.ToString() + "\n ";
                 
             }
             return neviem;
