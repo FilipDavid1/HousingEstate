@@ -31,7 +31,11 @@ namespace HousingEstate
             set => surName = value;
         }
 
-       
+
+       public string GetInfoAboutFlat()
+       {
+           return this.currentFlat.ToString();
+       }
 
 
         public Person(int age, string name, string lastName)
