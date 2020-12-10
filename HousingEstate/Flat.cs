@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HousingEstate
 {
-    class Flat
+    public class Flat
     {
         private int numberOfFlat;
         private int sizeOfFlat;
@@ -53,7 +53,7 @@ namespace HousingEstate
             return String.Format($"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}");
         }
 
-        public void AddHabitant(Person habitant)
+        public void AddHabitant(Habitant habitant)
         {
             habitantList.Add(habitant);
             habitant.currentFlat = this;
