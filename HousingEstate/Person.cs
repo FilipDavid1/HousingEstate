@@ -50,7 +50,7 @@ namespace HousingEstate
 
         public override string ToString()
         {
-            return String.Format($"Person with name {this.firstName} last name {this.surName} and with age {this.age}");
+            return $"Person with name {firstName} last name {surName} and with age {age}";
         } 
         
         public Person()
