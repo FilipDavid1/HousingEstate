@@ -66,13 +66,13 @@ namespace HousingEstate
 
         public string GetInfoAboutAllHabitants()
         {
-            string neviem ="";
+            string x ="";
             foreach (var habitant in habitantList)
             {
-                neviem += habitant.ToString() + "\n ";
+                x += habitant.ToString() + "\n ";
                 
             }
-            return neviem;
+            return x;
         }
         
         public string GetInfoAboutBlockOfFlats()

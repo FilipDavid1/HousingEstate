@@ -7,6 +7,7 @@ namespace HousingEstate
     {
         private int numberOfBlockOfFlat;
         private string street;
+        public HousingEstate currentHousingEstate;
 
         public int NumberOfBlockOfFlat
         {
@@ -68,6 +69,11 @@ namespace HousingEstate
             }
 
             return x;
+        }
+
+        public string GetInfoAboutHousingEstate()
+        {
+            return this.currentHousingEstate.ToString();
         }
         
     }

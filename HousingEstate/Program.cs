@@ -17,6 +17,7 @@ namespace HousingEstate
             Entrance entrance = new Entrance(35, 13, 26);
             Entrance entrance1 = new Entrance(37, 13, 26);
             BlockOfFlats blockOfFlats = new BlockOfFlats(33, "Kollarova");
+            HousingEstate housingEstate = new HousingEstate();
 
            
             
@@ -39,6 +40,9 @@ namespace HousingEstate
             Console.WriteLine(blockOfFlats);
             Console.WriteLine(blockOfFlats.GetInfoAboutAllEntrances());
             Console.WriteLine(blockOfFlats.GetInfoAboutAllFlats());
+            housingEstate.AddBlockOfFlats(blockOfFlats);
+            Console.WriteLine(housingEstate.GetInfoAboutAllBlockOfFlats());
+            Console.WriteLine(housingEstate.GetNumberOfBlockOfFlats());
             
            
 
