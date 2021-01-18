@@ -39,11 +39,11 @@ namespace HousingEstate
        
 
 
-        public Person(int age, string name, string lastName)
+        public Person(int age_, string name, string lastName)
         {
-            this.age = age;
-            this.firstName = name;
-            this.surName = lastName;
+            age = age_;
+            firstName = name;
+            surName = lastName;
 
         }
 
