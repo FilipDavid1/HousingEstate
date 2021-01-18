@@ -1,4 +1,6 @@
-﻿namespace HousingEstate
+﻿using System.Collections.Generic;
+
+namespace HousingEstate
 {
     public class BlockOfFlats
     {
@@ -20,10 +22,13 @@
             set => street = value;
         }
 
-        public  HousingEstate(int numberOfBlockOfFlat_, string street_)
+        public List<Flat> flatList = new List<Flat>();
+        public List<Entrance> entranceList = new List<Entrance>();
+
+        public  HousingEstate(int numberOfBlockOfFlat, string street)
         {
-            NumberOfBlockOfFlat = numberOfBlockOfFlat_;
-            street = street_;
+            this.NumberOfBlockOfFlat = numberOfBlockOfFlat;
+            this.street = street;
         }
     }
 }
