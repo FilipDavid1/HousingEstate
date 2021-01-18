@@ -1,10 +1,13 @@
-﻿namespace HousingEstate
+﻿using System;
+
+namespace HousingEstate
 {
     public class Entrance
     {
         private int numberOfEntrance;
         private int numberOfFloors;
         private int numberOfFlats;
+        public BlockOfFlats currentBlockOfFlats;
 
         public int NumberOfEntrance
         {
@@ -38,6 +41,16 @@
             this.numberOfEntrance = numberOfEntrance;
             this.numberOfFloors = numberOfFloors;
             this.numberOfFlats = numberOfFlats;
+        }
+
+        public string GetInfoAboutBlockOfFlats()
+        {
+            return this.currentBlockOfFlats.ToString();
+        }
+
+        public override string ToString()
+        {
+            return String.Format($"Numnber of entrace is {numberOfEntrance}, number of floors is {numberOfFloors} and number of flats is{numberOfFlats}.");
         }
     }
 }
