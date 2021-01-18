@@ -50,13 +50,10 @@ namespace HousingEstate
 
         public override string ToString()
         {
-            return $"Person with name {firstName} last name {surName} and with age {age}";
+            return $"Person with name {firstName} last name {surName} and with age {age}.";
         } 
         
-        public Person()
-        {
-
-        }
+       
         
         
     }
