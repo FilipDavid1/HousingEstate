@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HousingEstate
 {
@@ -42,15 +43,32 @@ namespace HousingEstate
 
             return x;
         }
+
+        public override string ToString()
+        {
+            return String.Format($"Number os block is {numberOfBlockOfFlat} and name of street is {street}. ");
+        }
+
+        public void AddEntrance(Entrance entrance)
+        {
+            entranceList.Add(entrance);
+            entrance.currentBlockOfFlats = this;
+        }
+        public void AddFlat( Flat flat)
+        {
+            flatList.Add(flat);
+            flat.currentBlockOfFlats = this;
+        }
         public string GetInfoAboutAllFlats()
         {
             string x = "";
-            foreach (var flat in flatList)
+            foreach (var flats in flatList)
             {
-                x += flat.ToString() + "\n ";
+                x += flats.ToString() + "\n ";
             }
 
             return x;
         }
+        
     }
 }
