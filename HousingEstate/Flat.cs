@@ -10,6 +10,7 @@ namespace HousingEstate
         private int numberOfFlat;
         private int sizeOfFlat;
         private int numberOfRooms;
+        public BlockOfFlats currentBlockOfFlats;
 
 
 
@@ -50,7 +51,7 @@ namespace HousingEstate
 
         public override string ToString()
         {
-            return String.Format($"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}");
+            return String.Format($"Number of flat is {numberOfFlat}, size of flat is {sizeOfFlat} square meters, and number of rooms is {numberOfRooms}.");
         }
 
         public void AddHabitant(Habitant habitant)
@@ -72,6 +73,11 @@ namespace HousingEstate
                 
             }
             return neviem;
+        }
+        
+        public string GetInfoAboutBlockOfFlats()
+        {
+            return this.currentBlockOfFlats.ToString();
         }
 
 
