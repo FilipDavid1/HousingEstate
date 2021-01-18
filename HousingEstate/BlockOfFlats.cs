@@ -25,10 +25,32 @@ namespace HousingEstate
         public List<Flat> flatList = new List<Flat>();
         public List<Entrance> entranceList = new List<Entrance>();
 
-        public  HousingEstate(int numberOfBlockOfFlat, string street)
+        public  BlockOfFlats(int numberOfBlockOfFlat, string street)
         {
             this.NumberOfBlockOfFlat = numberOfBlockOfFlat;
             this.street = street;
+        }
+
+
+        public string GetInfoAboutAllEntrances()
+        {
+            string x = "";
+            foreach (var entrances in entranceList)
+            {
+                x += entrances.ToString() + "\n ";
+            }
+
+            return x;
+        }
+        public string GetInfoAboutAllFlats()
+        {
+            string x = "";
+            foreach (var flat in flatList)
+            {
+                x += flat.ToString() + "\n ";
+            }
+
+            return x;
         }
     }
 }
